@@ -1,0 +1,9 @@
+# Ignorar pastas
+build/
+coverage/
+.next/
+.storybook/
+.jest/
+
+# Ignorar arquivos .hbs
+*.hbs
