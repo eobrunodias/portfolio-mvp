@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`font-sans antialiased flex flex-col h-screen bg-background text-foreground`}
+        className={`font-sans antialiased flex flex-col  bg-background text-foreground`}
       >
         <LanguageProvider>
           <Header />
