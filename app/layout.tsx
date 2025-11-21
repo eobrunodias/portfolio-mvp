@@ -2,6 +2,9 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { LanguageProvider } from "@/contexts/language-context";
 import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -36,10 +39,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={`${_geist.className} antialiased`}>
-        {children}
-        <Analytics />
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body
+        className={`font-sans antialiased flex flex-col h-screen bg-background text-foreground`}
+      >
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1 overflow-y-auto">{children}</main>
+          <Footer />
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 py-24 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="space-y-8">
         <div>
           <h1 className="text-5xl font-bold text-foreground">
@@ -21,7 +21,7 @@ export default function HeroSection() {
             Ver Projetos
           </a>
           <a
-            href="/contato"
+            href="/contacts"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-border text-foreground font-medium transition-all hover:bg-secondary"
           >
             Entrar em Contato

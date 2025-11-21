@@ -1,75 +1,103 @@
-const projects = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Plataforma de e-commerce completa com autenticação, carrinho de compras e integração com Stripe para pagamento.",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Blog Pessoal",
-    description: "Blog minimalista com sistema de comentários, markdown support e dark mode.",
-    tags: ["Next.js", "MDX", "Tailwind CSS", "Supabase"],
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "App de Tarefas",
-    description: "Aplicativo de gestão de tarefas com sincronização em tempo real entre dispositivos.",
-    tags: ["React", "Firebase", "TypeScript", "Material-UI"],
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Dashboard Analytics",
-    description: "Dashboard de análise de dados com gráficos interativos e relatórios customizáveis.",
-    tags: ["Next.js", "Recharts", "TypeScript", "Tailwind"],
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Sistema de Agendamento",
-    description: "Plataforma de agendamento com calendário interativo e notificações por email.",
-    tags: ["Next.js", "React Query", "Node.js", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 6,
-    title: "Gerador de Avatares",
-    description: "Ferramenta para gerar avatares personalizados com diferentes estilos e customizações.",
-    tags: ["React", "Canvas API", "TypeScript", "Next.js"],
-    link: "#",
-  },
-]
+"use client"
+import { ExternalLink, Github } from "lucide-react"
+import { useEffect, useState } from "react"
+
+interface GitHubRepo {
+  id: number
+  name: string
+  description: string
+  html_url: string
+  language: string
+  stargazers_count: number
+  topics: string[]
+}
 
 export default function ProjectsGrid() {
-  return (
-    <div className="grid gap-8 md:grid-cols-2">
-      {projects.map((project) => (
-        <div
-          key={project.id}
-          className="group rounded-lg border border-border bg-card p-8 transition-all hover:border-foreground hover:shadow-lg"
-        >
-          <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
-          <p className="mt-4 text-muted-foreground leading-relaxed">{project.description}</p>
+  const [projects, setProjects] = useState<GitHubRepo[]>([])
+  const [loading, setLoading] = useState(true)
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-secondary px-3 py-1 text-sm text-foreground">
-                {tag}
-              </span>
-            ))}
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("https://api.github.com/users/eobrunodias/repos?sort=stars&per_page=6", {
+          headers: process.env.GITHUB_TOKEN
+            ? {
+                Authorization: `token ${process.env.GITHUB_TOKEN}`,
+              }
+            : undefined,
+        })
+        const data = await response.json()
+        setProjects(data)
+      } catch (error) {
+        console.error("Error fetching projects:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProjects()
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className="rounded-lg border border-border bg-card animate-pulse">
+            <div className="aspect-video bg-secondary rounded-lg mb-4" />
+            <div className="h-6 bg-secondary rounded mb-4" />
+            <div className="h-4 bg-secondary rounded w-3/4" />
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <a
+          key={project.id}
+          href={project.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground hover:shadow-lg"
+        >
+          <div className="aspect-video bg-gradient-to-br from-secondary to-muted overflow-hidden relative">
+            <div className="w-full h-full flex items-center justify-center">
+              <Github className="h-12 w-12 text-muted-foreground opacity-50" />
+            </div>
           </div>
 
-          <a
-            href={project.link}
-            className="mt-6 inline-flex text-sm font-medium text-accent hover:text-foreground transition-colors"
-          >
-            Ver projeto →
-          </a>
-        </div>
+          <div className="p-6">
+            <h3 className="text-lg font-bold text-foreground line-clamp-2">{project.name}</h3>
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed line-clamp-2">
+              {project.description || "Sem descrição disponível"}
+            </p>
+
+            {project.topics && project.topics.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.topics.slice(0, 3).map((tag) => (
+                  <span key={tag} className="rounded-full bg-secondary px-2 py-1 text-xs text-foreground">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <div className="mt-4 flex items-center justify-between pt-4 border-t border-border">
+              <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                {project.language && (
+                  <span className="flex items-center gap-1">
+                    <div className="h-2 w-2 rounded-full bg-accent" />
+                    {project.language}
+                  </span>
+                )}
+                {project.stargazers_count > 0 && <span>⭐ {project.stargazers_count}</span>}
+              </div>
+              <ExternalLink className="h-4 w-4 text-accent group-hover:translate-x-1 transition-transform" />
+            </div>
+          </div>
+        </a>
       ))}
     </div>
   )

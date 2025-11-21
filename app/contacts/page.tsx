@@ -1,23 +1,24 @@
-"use client"
+"use client";
 
-import Header from "@/components/header"
-import ContactForm from "@/components/contact-form"
-import Footer from "@/components/footer"
+import ContactForm from "@/components/contact-form";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h1 className="text-4xl font-bold text-foreground">Contato</h1>
+    <section className="flex items-center justify-center min-h-[calc(100vh-120px)] pt-20 pb-20">
+      <div className="mx-auto max-w-md px-4 sm:px-6 lg:px-8 w-full">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold text-foreground">
+            {t.contact_title}
+          </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Vamos conversar! Preencha o formulário abaixo e eu retornarei em breve.
+            {t.contact_description}
           </p>
         </div>
         <ContactForm />
       </div>
-      <Footer />
-    </main>
-  )
+    </section>
+  );
 }
