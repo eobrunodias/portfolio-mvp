@@ -3,7 +3,7 @@ export const languages = {
     home: "Home",
     skills: "Skills",
     projects: "Projetos",
-    contact: "contacts",
+    contact: "Contacts",
     hero_greeting: "Olá, sou",
     hero_title: "Bruno Dias",
     hero_description:
