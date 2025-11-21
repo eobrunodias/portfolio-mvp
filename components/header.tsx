@@ -52,10 +52,10 @@ export default function Header() {
           href="/"
           className="text-xl font-bold text-foreground transition-opacity hover:opacity-75"
         >
-          B.
+          BDG.
         </Link>
 
-        <ul className="flex items-center gap-8">
+        <ul className="flex mx-auto items-center gap-8">
           <li>
             <Link
               href="/"
@@ -104,13 +104,15 @@ export default function Header() {
               {t.contact}
             </Link>
           </li>
+        </ul>
 
+        <ul className="flex gap-2">
           {mounted && (
             <>
               <li className="relative">
                 <button
                   onClick={() => setShowLanguageMenu(!showLanguageMenu)}
-                  className="inline-flex items-center justify-center p-2 rounded-lg border border-border transition-colors hover:bg-secondary"
+                  className="inline-flex items-center justify-center p-2 rounded-lg border border-border transition-colors hover:bg-secondary cursor-pointer"
                   aria-label="Toggle language"
                 >
                   <Globe className="h-5 w-5" />
@@ -140,7 +142,7 @@ export default function Header() {
               <li>
                 <button
                   onClick={toggleTheme}
-                  className="inline-flex items-center justify-center p-2 rounded-lg border border-border transition-colors hover:bg-secondary"
+                  className="inline-flex items-center justify-center p-2 rounded-lg border border-border transition-colors hover:bg-secondary cursor-pointer"
                   aria-label="Toggle theme"
                 >
                   {isDark ? (
