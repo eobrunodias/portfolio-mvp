@@ -2,7 +2,7 @@ export const languages = {
   "pt-br": {
     home: "Home",
     skills: "Skills",
-    projects: "Projetos",
+    projects: "Projects",
     contact: "Contacts",
     hero_greeting: "Olá, sou",
     hero_title: "Bruno Dias",

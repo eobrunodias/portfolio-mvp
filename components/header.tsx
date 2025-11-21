@@ -82,9 +82,9 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/projetos"
+              href="/projects"
               className={`text-sm font-medium transition-colors ${
-                isActive("/projetos")
+                isActive("/projects")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}

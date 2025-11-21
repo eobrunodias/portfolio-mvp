@@ -15,7 +15,7 @@ export default function HeroSection() {
 
         <div className="flex flex-wrap gap-4">
           <a
-            href="/projetos"
+            href="/projects"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-foreground text-background font-medium transition-all hover:opacity-90"
           >
             Ver Projetos
