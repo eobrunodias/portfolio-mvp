@@ -52,7 +52,7 @@ export default function Header() {
           href="/"
           className="text-xl font-bold text-foreground transition-opacity hover:opacity-75"
         >
-          Dev Portfolio
+          B.
         </Link>
 
         <ul className="flex items-center gap-8">
