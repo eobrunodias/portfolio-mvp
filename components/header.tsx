@@ -78,7 +78,7 @@ export default function Header() {
             <Link
               href="/about"
               className={`text-sm font-medium transition-colors ${
-                isActive("/")
+                isActive("/about")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
