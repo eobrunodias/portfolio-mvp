@@ -8,7 +8,7 @@ export default function ContactPage() {
   const { t } = useLanguage();
 
   return (
-    <section className="flex items-center justify-center min-h-[calc(100vh-120px)] pt-20 pb-20">
+    <section className="flex items-center justify-center min-h-[calc(100vh-120px)] pt-25 pb-25">
       <div className="mx-auto max-w-md px-4 sm:px-6 lg:px-8 w-full">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-foreground">

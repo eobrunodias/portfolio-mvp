@@ -27,11 +27,11 @@ export default function SkillsPage() {
 
   // TODO: better my skills page
   return (
-    <section className="flex items-center justify-center min-h-[calc(100vh-120px)] pt-20 pb-20">
+    <section className="flex items-center justify-center min-h-[calc(100vh-120px)] pt-25 pb-25">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="space-y-16">
           <div>
-            <h1 className="text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl font-bold text-foreground mb-4">
               Skills & Expertise
             </h1>
             <p className="text-xl text-muted-foreground">
