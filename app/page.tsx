@@ -6,14 +6,20 @@ import { useLanguage } from "@/contexts/language-context";
 export default function Home() {
   const { t } = useLanguage();
 
+  // TODO: fix the style padding of other pages in t/b
+  // TODO: change color agressive
+  // TODO: change the copywrite in my pages
+  // TODO: change for hero component
+  // TODO: add my picture edition
+  // TODO: make the logic for search only project that i set in my repository
+  // TODO: verify if is ssg or is only client
   return (
     <section className="flex items-center h-screen pt-20 pb-20">
       <div className="mx-auto max-w-6xl  w-full">
         <div className="space-y-12 flex flex-col items-center">
           <div className="space-y-6 max-w-3xl">
             <h1 className="text-5xl sm:text-6xl font-bold text-foreground leading-tight">
-              {t.hero_greeting}{" "}
-              <span className="text-accent">{t.hero_title}</span>
+              {t.hero_greeting} <span className="">{t.hero_title}.</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed">
               {t.hero_description}

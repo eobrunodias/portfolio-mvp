@@ -3,6 +3,7 @@
 import ContactForm from "@/components/contact-form";
 import { useLanguage } from "@/contexts/language-context";
 
+// TODO: fix the email service
 export default function ContactPage() {
   const { t } = useLanguage();
 

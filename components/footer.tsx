@@ -1,10 +1,13 @@
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
+  // TODO: fix my footer copywrite
   return (
     <footer className="fixed bottom-0 left-0 right-0 border-t border-border bg-background py-4">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <p className="text-sm text-muted-foreground">© {currentYear} Dev Portfolio. Todos os direitos reservados.</p>
+        <p className="text-sm text-muted-foreground">
+          © {currentYear} Dev Portfolio. Todos os direitos reservados.
+        </p>
 
         <div className="flex items-center gap-6">
           <a
@@ -32,5 +35,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

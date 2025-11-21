@@ -14,6 +14,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
+  // TODO: solve this issue setMounted
   useEffect(() => {
     setMounted(true);
     const isDarkMode =
@@ -45,6 +46,9 @@ export default function Header() {
 
   const isActive = (path: string) => pathname === path;
 
+  // TODO: convert my logo to svg for use everywhere
+  // TODO: add logo here intead the BDG letter
+  // TODO: add the icon for languages with flags
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
