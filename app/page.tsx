@@ -32,7 +32,7 @@ export default function Home() {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/eobrunodias"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center p-3 rounded-lg border border-border text-foreground transition-colors hover:bg-secondary"
@@ -41,7 +41,7 @@ export default function Home() {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:seu@email.com"
+              href="mailto:brunodias.contact@gmail.com"
               className="inline-flex items-center justify-center p-3 rounded-lg border border-border text-foreground transition-colors hover:bg-secondary"
               aria-label="Email"
             >
