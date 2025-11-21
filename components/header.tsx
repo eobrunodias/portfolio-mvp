@@ -76,6 +76,18 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="/about"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/")
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {t.about}
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/skills"
               className={`text-sm font-medium transition-colors ${
                 isActive("/skills")
