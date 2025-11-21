@@ -1,9 +1,10 @@
 export const languages = {
   "pt-br": {
     home: "Home",
-    skills: "Skills",
-    projects: "Projects",
-    contact: "Contacts",
+    about: "Sobre",
+    skills: "Habilidades",
+    projects: "Projetos",
+    contact: "Contatos",
     hero_greeting: "Olá, sou",
     hero_title: "Bruno Dias",
     hero_description:
@@ -26,9 +27,10 @@ export const languages = {
   },
   en: {
     home: "Home",
+    about: "About",
     skills: "Skills",
     projects: "Projects",
-    contact: "Contact",
+    contact: "Contacts",
     hero_greeting: "Hi, I'm",
     hero_title: "Bruno Dias",
     hero_description:
@@ -51,9 +53,10 @@ export const languages = {
   },
   es: {
     home: "Inicio",
+    about: "Sobre",
     skills: "Habilidades",
     projects: "Proyectos",
-    contact: "Contacto",
+    contact: "Contactos",
     hero_greeting: "Hola, soy",
     hero_title: "Bruno Dias",
     hero_description:
