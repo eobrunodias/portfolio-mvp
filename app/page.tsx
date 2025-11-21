@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/language-context";
 export default function Home() {
   const { t } = useLanguage();
 
+  // TODO: create the about page
   // TODO: fix the style padding of other pages in t/b
   // TODO: change color agressive
   // TODO: change the copywrite in my pages
