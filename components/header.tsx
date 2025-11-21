@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import type { Language } from "@/lib/languages";
+import Logo from "./logo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -46,6 +47,7 @@ export default function Header() {
 
   const isActive = (path: string) => pathname === path;
 
+  // TODO: make your code and your logo hide for public
   // TODO: convert my logo to svg for use everywhere
   // TODO: add logo here intead the BDG letter
   // TODO: add the icon for languages with flags
@@ -56,7 +58,7 @@ export default function Header() {
           href="/"
           className="text-xl font-bold text-foreground transition-opacity hover:opacity-75"
         >
-          BDG.
+          <Logo height={48} width={48} />
         </Link>
 
         <ul className="flex mx-auto items-center gap-8">
