@@ -1,6 +1,6 @@
 {
   // On/Off auto save
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // Code Runner settings
   "code-runner.clearPreviousOutput": true,
   "code-runner.runInTerminal": true,
