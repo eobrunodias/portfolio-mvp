@@ -2,9 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Button, Input, Textarea } from "@/components/ui";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function ContactForm() {
@@ -91,8 +89,8 @@ export default function ContactForm() {
         {submitted
           ? t.form_sent
           : isSubmitting
-          ? t.form_sending
-          : t.form_submit}
+            ? t.form_sending
+            : t.form_submit}
       </Button>
     </form>
   );

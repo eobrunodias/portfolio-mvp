@@ -27,7 +27,7 @@ export default function ProjectsGrid() {
                   Authorization: `token ${process.env.GITHUB_TOKEN}`,
                 }
               : undefined,
-          }
+          },
         );
         const data = await response.json();
         setProjects(data);

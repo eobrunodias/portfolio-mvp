@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectsGrid from "@/components/projects-grid";
+import { ProjectsGrid } from "@/components";
 
 // TODO: better my projects page and solve sicronize my projects
 export default function ProjectsPage() {

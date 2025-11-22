@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import type { Language } from "@/lib/languages";
-import Logo from "./logo";
+import { Logo } from "@/components";
 
 export default function Header() {
   const pathname = usePathname();
@@ -150,8 +150,8 @@ export default function Header() {
                         {lang === "pt-br"
                           ? "Português"
                           : lang === "en"
-                          ? "English"
-                          : "Español"}
+                            ? "English"
+                            : "Español"}
                       </button>
                     ))}
                   </div>
