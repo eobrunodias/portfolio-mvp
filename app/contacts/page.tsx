@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactForm } from "@/components";
+import ContactForm from "@/components/contact-form";
 import { useLanguage } from "@/contexts/language-context";
 
 // TODO: fix the email service
