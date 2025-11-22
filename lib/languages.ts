@@ -14,7 +14,7 @@ export const languages = {
     contact_btn: "Entrar em contato",
     contact_title: "Vamos conversar!",
     contact_description:
-      "Tenho interesse em ouvir sobre seus projetos. Preencha o formulário abaixo.",
+    "Tenho interesse em ouvir sobre seus projetos. Preencha o formulário abaixo.",
     form_name: "Nome",
     form_name_placeholder: "Seu nome",
     form_email: "E-mail",
@@ -24,6 +24,7 @@ export const languages = {
     form_submit: "Enviar Mensagem",
     form_sending: "Enviando...",
     form_sent: "✓ Mensagem enviada!",
+    project_btn: "Ver projetos",
   },
   en: {
     home: "Home",
@@ -50,6 +51,7 @@ export const languages = {
     form_submit: "Send Message",
     form_sending: "Sending...",
     form_sent: "✓ Message sent!",
+    project_btn: "Projects",
   },
   es: {
     home: "Inicio",
@@ -76,6 +78,7 @@ export const languages = {
     form_submit: "Enviar Mensaje",
     form_sending: "Enviando...",
     form_sent: "✓ ¡Mensaje enviado!",
+     project_btn: "Ver proyectos",
   },
 };
 
