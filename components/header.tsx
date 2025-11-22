@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import type { Language } from "@/lib/languages";
-import { Logo } from "@/components";
+import Logo from "./logo";
 
 export default function Header() {
   const pathname = usePathname();

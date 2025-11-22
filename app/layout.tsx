@@ -2,7 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { Header, Footer } from "@/components";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { LanguageProvider } from "@/contexts/language-context";
 import "./globals.css";
 
@@ -32,11 +33,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({
+  children
+}: RootLayoutProps) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
