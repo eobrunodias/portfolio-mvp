@@ -2,6 +2,7 @@
 
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import Image from "next/image";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -15,8 +16,12 @@ export default function Home() {
   // TODO: make the logic for search only project that i set in my repository
   // TODO: verify if is ssg or is only client
   return (
-    <section className="flex items-center h-screen pt-20 pb-20">
-      <div className="mx-auto max-w-6xl  w-full">
+    <section className="flex justify-center items-center h-screen pt-20 pb-20">
+      <div className="mx-auto max-w-6xl w-full flex justify-between px-8 gap-25">
+        <div className="self-center pb-14">
+          <Image className="" alt="image" src={"/logo.svg"} height={430} width={430}/>
+        </div>
+        <div className="">
         <div className="space-y-12 flex flex-col items-center">
           <div className="space-y-6 max-w-3xl">
             <h1 className="text-5xl sm:text-6xl font-bold text-foreground leading-tight">
@@ -75,6 +80,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 flex flex-wrap gap-2 border-t border-border"></div>
+          </div>
         </div>
       </div>
     </section>
