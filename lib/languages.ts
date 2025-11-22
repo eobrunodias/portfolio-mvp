@@ -1,6 +1,6 @@
 export const languages = {
   "pt-br": {
-    home: "Home",
+    home: "Inicio",
     about: "Sobre",
     skills: "Habilidades",
     projects: "Projetos",
@@ -55,7 +55,7 @@ export const languages = {
   },
   es: {
     home: "Inicio",
-    about: "Sobre",
+    about: "Acerca de",
     skills: "Habilidades",
     projects: "Proyectos",
     contact: "Contactos",
